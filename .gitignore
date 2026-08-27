@@ -1,0 +1,31 @@
+# Secrets — never commit. Use the .example files instead.
+**/.env
+!**/.env.example
+
+# Generated at runtime by wal_apply.sh on every wallpaper change.
+config/gtk-3.0/colors.css
+config/gtk-4.0/colors.css
+config/qt5ct/colors/pywal.conf
+config/qt6ct/colors/pywal.conf
+config/qt5ct/qss/pywal.qss
+config/qt6ct/qss/pywal.qss
+config/hypr/colors.conf
+config/hypr/wal-colors.conf
+config/rofi/theme.rasi
+config/cava/config
+
+# Machine-specific
+config/hypr/monitors.conf
+
+# Editor / plugin state
+config/nvim/lazy-lock.json
+**/__pycache__/
+*.pyc
+
+# Scratch files
+*.bak
+*.bak-*
+*.save
+*.orig
+*.log
+*.qslog

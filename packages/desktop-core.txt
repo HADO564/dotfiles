@@ -1,0 +1,85 @@
+# Everything the desktop itself needs. Install with:
+#   yay -S --needed - < packages/desktop-core.txt
+#
+# For an exact clone of the author's machine instead, use
+# pacman-official.txt and aur-packages.txt (they list every explicitly
+# installed package, including unrelated software).
+
+# --- compositor & session ---
+hyprland
+hypridle
+hyprlock
+hyprpicker
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+polkit-gnome
+
+# --- the bar / shell (this is the important one) ---
+quickshell-git
+
+# --- wallpaper & colour generation ---
+awww                      # swww fork; provides swww / swww-daemon
+python-pywal              # drives wal_apply.sh, the live colour pipeline
+matugen                   # legacy templates, kept for reference
+linux-wallpaperengine-git # optional: animated Wallpaper Engine backgrounds
+waypaper
+
+# --- terminal, launcher, notifications ---
+kitty
+rofi
+vicinae-bin
+swaync
+swayosd
+cliphist
+wl-clipboard
+
+# --- file manager & archives ---
+thunar
+thunar-archive-plugin
+xarchiver
+
+# --- panels / applets ---
+nwg-dock-hyprland
+nwg-displays
+nwg-drawer
+
+# --- theming ---
+adw-gtk-theme
+papirus-icon-theme
+bibata-cursor-theme
+qt6ct
+qt5ct                     # needed for Qt5 apps (VLC etc.); see README
+
+# --- fonts ---
+ttf-jetbrains-mono-nerd
+ttf-iosevka-nerd
+ttf-nerd-fonts-symbols
+noto-fonts-emoji
+
+# --- audio / media ---
+pipewire
+wireplumber
+pavucontrol
+playerctl
+cava
+
+# --- screenshots ---
+grim
+slurp
+grimblast-git
+
+# --- misc tooling used by the shell scripts ---
+jq
+socat
+inotify-tools
+imagemagick
+python-pillow
+networkmanager
+gammastep
+
+# --- tui apps configured here ---
+btop
+tmux
+lazygit
+neovim
+glow

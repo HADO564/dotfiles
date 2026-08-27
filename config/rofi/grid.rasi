@@ -1,0 +1,105 @@
+* {
+  bg:          rgba(17, 17, 27, 0.92);
+  bg-tile:     rgba(36, 40, 59, 0.75);
+  bg-hover:    rgba(51, 204, 255, 0.08);
+  fg:          #cdd6f4;
+  fg-dim:      rgba(166, 173, 200, 0.45);
+  fg-sub:      rgba(166, 173, 200, 0.75);
+  accent:      #33ccff;
+  selected-bg: rgba(51, 204, 255, 0.14);
+  border-col:  rgba(51, 204, 255, 0.28);
+  urgent:      #f7768e;
+
+  background-color: transparent;
+  text-color:       @fg;
+}
+
+window {
+  width:            720px;
+  border-radius:    20px;
+  background-color: @bg;
+  border:           1px;
+  border-color:     @border-col;
+}
+
+mainbox {
+  background-color: transparent;
+  children:         [ inputbar, listview ];
+  spacing:          0;
+}
+
+inputbar {
+  background-color: transparent;
+  padding:          20px 24px 16px;
+  spacing:          14px;
+  children:         [ prompt, entry ];
+}
+
+prompt {
+  background-color: transparent;
+  text-color:       @accent;
+  font:             "JetBrainsMono Nerd Font 15";
+  vertical-align:   0.5;
+}
+
+entry {
+  background-color: transparent;
+  text-color:       @fg;
+  font:             "JetBrainsMono Nerd Font 15";
+  placeholder:      "Search applications…";
+  placeholder-color: @fg-dim;
+  vertical-align:   0.5;
+}
+
+separator {
+  background-color: rgba(255, 255, 255, 0.06);
+  height:           1px;
+  margin:           0 18px;
+}
+
+listview {
+  background-color: transparent;
+  padding:          16px;
+  spacing:          10px;
+  columns:          5;
+  lines:            3;
+  scrollbar:        false;
+  border:           0;
+  fixed-height:     true;
+}
+
+element {
+  background-color: @bg-tile;
+  text-color:       @fg;
+  padding:          18px 8px 14px;
+  border-radius:    14px;
+  spacing:          10px;
+  orientation:      vertical;
+  cursor:           pointer;
+}
+
+element selected {
+  background-color: @selected-bg;
+  border:           1px;
+  border-color:     @accent;
+  text-color:       @fg;
+}
+
+element normal.urgent {
+  border:       1px;
+  border-color: @urgent;
+}
+
+element-icon {
+  size:             52px;
+  background-color: transparent;
+  horizontal-align: 0.5;
+}
+
+element-text {
+  background-color: transparent;
+  text-color:       @fg;
+  font:             "JetBrainsMono Nerd Font 10";
+  horizontal-align: 0.5;
+  vertical-align:   0.5;
+}

@@ -1,0 +1,95 @@
+* {
+  bg:            rgba(17, 17, 27, 0.96);
+  bg-alt:        rgba(49, 50, 68, 0.70);
+  fg:            #cdd6f4;
+  fg-dim:        rgba(166, 173, 200, 0.50);
+  accent:        #33ccff;
+  selected-bg:   rgba(51, 204, 255, 0.15);
+  border-col:    rgba(51, 204, 255, 0.35);
+  urgent:        #ff5555;
+
+  background-color: transparent;
+  text-color:       @fg;
+}
+
+window {
+  width:            620px;
+  border-radius:    18px;
+  background-color: @bg;
+  border:           1px;
+  border-color:     @border-col;
+}
+
+mainbox {
+  background-color: transparent;
+  children:         [ inputbar, separator, listview ];
+  spacing:          0;
+}
+
+inputbar {
+  background-color: transparent;
+  padding:          18px 20px 14px;
+  spacing:          14px;
+  children:         [ prompt, entry ];
+}
+
+prompt {
+  background-color: transparent;
+  text-color:       @accent;
+  font:             "JetBrainsMono Nerd Font 15";
+  vertical-align:   0.5;
+}
+
+entry {
+  background-color: transparent;
+  text-color:       @fg;
+  font:             "JetBrainsMono Nerd Font 15";
+  placeholder:      "Search apps and commands…";
+  placeholder-color: @fg-dim;
+  vertical-align:   0.5;
+}
+
+separator {
+  background-color: rgba(255, 255, 255, 0.07);
+  height:           1px;
+  margin:           0 14px;
+}
+
+listview {
+  background-color: transparent;
+  padding:          8px;
+  spacing:          2px;
+  lines:            9;
+  scrollbar:        false;
+  border:           0;
+}
+
+element {
+  background-color: transparent;
+  text-color:       @fg;
+  padding:          9px 12px;
+  border-radius:    10px;
+  spacing:          12px;
+  orientation:      horizontal;
+  children:         [ element-icon, element-text ];
+}
+
+element normal.urgent { text-color: @urgent; }
+
+element selected {
+  background-color: @selected-bg;
+  text-color:       @fg;
+}
+
+element-icon {
+  size:             22px;
+  background-color: transparent;
+  vertical-align:   0.5;
+}
+
+element-text {
+  background-color: transparent;
+  text-color:       inherit;
+  font:             "JetBrainsMono Nerd Font 13";
+  vertical-align:   0.5;
+}

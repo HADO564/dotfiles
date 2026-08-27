@@ -1,0 +1,13 @@
+{
+  "scale": 1.0,
+  "wallpaper_dir": "~/Pictures/wallpapers",
+  "guide": false,
+  "workspaceCount": 5,
+  "keybinds": [],
+  "uiScale": 1,
+  "openGuideAtStartup": true,
+  "topbarHelpIcon": true,
+  "wallpaperDir": "/home/hadoki/Pictures/Wallpapers",
+  "language": "us",
+  "kbOptions": "grp:alt_shift_toggle"
+}
