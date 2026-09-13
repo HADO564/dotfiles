@@ -33,6 +33,18 @@ defaults write com.apple.dock mru-spaces -bool false
 mkdir -p "$HOME/Pictures/Screenshots"
 defaults write com.apple.screencapture location -string "$HOME/Pictures/Screenshots"
 
+# ── Keyboard: fast repeat, no accent popup (log out to apply) ──────────────────
+# Holding a key shows an accent picker instead of repeating — breaks hjkl in nvim.
+defaults write -g ApplePressAndHoldEnabled -bool false
+defaults write -g KeyRepeat -int 2          # 30ms between repeats (UI fastest)
+defaults write -g InitialKeyRepeat -int 15  # 225ms before repeat starts (UI shortest)
+
+# ── Touch ID for sudo (asks for your password once) ────────────────────────────
+# sudo_local survives macOS updates. Inside tmux this needs pam-reattach.
+if ! grep -qs '^auth.*pam_tid.so' /etc/pam.d/sudo_local; then
+  sed 's/^#auth/auth/' /etc/pam.d/sudo_local.template | sudo tee /etc/pam.d/sudo_local >/dev/null
+fi
+
 # ── Apply ─────────────────────────────────────────────────────────────────────
 /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
 killall Dock SystemUIServer 2>/dev/null || true
