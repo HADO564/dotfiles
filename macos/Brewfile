@@ -1,9 +1,6 @@
 # Install with: brew bundle --file macos/Brewfile
 # Best tool for the job — native macOS where it's good enough, third-party where it's better.
 
-tap "nikitabobko/tap"
-tap "FelixKratz/formulae"
-
 # --- shell ---
 brew "starship"
 brew "fzf"
@@ -23,10 +20,6 @@ brew "tree-sitter-cli"  # nvim-treesitter builds parsers with it
 brew "lazygit"          # `lg`, LazyVim <leader>gg
 brew "direnv"           # per-project .envrc
 brew "glow"             # markdown in the terminal
-
-# --- window management (Hyprland stand-in) ---
-cask "nikitabobko/tap/aerospace"      # tiling + workspaces
-brew "FelixKratz/formulae/borders"    # active-window border
 
 # --- terminal & fonts ---
 cask "wezterm"
