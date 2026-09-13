@@ -8,9 +8,11 @@ CTRL=262144
 OPT=524288
 
 # hotkey <id> <enabled 0|1> <ascii char> <keycode> <modifiers>
+# XML form so values keep their real types (bool/integer), not strings.
 hotkey() {
+  local enabled; [ "$2" = 1 ] && enabled='<true/>' || enabled='<false/>'
   defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add "$1" \
-    "{ enabled = $2; value = { parameters = ($3, $4, $5); type = standard; }; }"
+    "<dict><key>enabled</key>$enabled<key>value</key><dict><key>parameters</key><array><integer>$3</integer><integer>$4</integer><integer>$5</integer></array><key>type</key><string>standard</string></dict></dict>"
 }
 
 # ── Free Ctrl+Space for Neovim ─────────────────────────────────────────────────
