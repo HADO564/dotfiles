@@ -44,12 +44,14 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias v='nvim'
 alias vi='nvim'
-alias cheat='nvim -R ~/dotfiles/macos/CHEATSHEET.md'
+alias lg='lazygit'
+alias cheat='glow -p ~/dotfiles/macos/CHEATSHEET.md'
 
 # ── Tools ──────────────────────────────────────────────────────────────────────
 source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"
 
 # ── Plugins (syntax-highlighting must stay last) ───────────────────────────────
 source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"

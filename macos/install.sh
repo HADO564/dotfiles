@@ -54,6 +54,7 @@ LINKS=(
   "$REPO/bin/tmux-sessionizer:$HOME/.local/bin/tmux-sessionizer"
   "$MACOS/config/wezterm/wezterm.lua:$HOME/.config/wezterm/wezterm.lua"
   "$MACOS/config/starship/starship.toml:$HOME/.config/starship/starship.toml"
+  "$MACOS/config/aerospace/aerospace.toml:$HOME/.config/aerospace/aerospace.toml"
   "$MACOS/home/.zshrc:$HOME/.zshrc"
   "$MACOS/home/.zprofile:$HOME/.zprofile"
 )

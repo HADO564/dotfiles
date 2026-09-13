@@ -19,15 +19,19 @@ hotkey() {
 hotkey 60 0 32 49 "$CTRL"
 hotkey 61 0 32 49 "$((CTRL + OPT))"
 
-# ── Ctrl+1..9 switches to Desktop N (Hyprland: Super+1..9) ─────────────────────
-# Only desktops that exist can be targeted; add them in Mission Control.
+# ── Workspaces are handled by AeroSpace (macos/config/aerospace) ───────────────
+# Turn off the native Ctrl+1..9 "Switch to Desktop N" shortcuts so they don't
+# compete with AeroSpace's Alt+1..9.
 keycodes=(18 19 20 21 23 22 26 28 25)
 for i in 0 1 2 3 4 5 6 7 8; do
-  hotkey "$((118 + i))" 1 "$((49 + i))" "${keycodes[$i]}" "$CTRL"
+  hotkey "$((118 + i))" 0 "$((49 + i))" "${keycodes[$i]}" "$CTRL"
 done
 
-# Keep desktops in a fixed order so the numbers above stay meaningful.
+# Settings AeroSpace recommends: stable Space order, apps grouped in Mission
+# Control, and one Space spanning all displays (needs a log out).
 defaults write com.apple.dock mru-spaces -bool false
+defaults write com.apple.dock expose-group-apps -bool true
+defaults write com.apple.spaces spans-displays -bool true
 
 # ── Screenshots land in ~/Pictures/Screenshots (grimblast saved to ~/Pictures) ─
 mkdir -p "$HOME/Pictures/Screenshots"

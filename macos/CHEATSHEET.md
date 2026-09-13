@@ -17,27 +17,28 @@ tmux and Neovim bindings are identical to Arch — see `config/hypr/dev-cheatshe
 | `Super + Shift + C` color picker | Digital Color Meter (Spotlight)                 |
 | `Super + I` btop         | Activity Monitor, or `top`                              |
 
-## Windows
+## Windows & workspaces (AeroSpace)
 
-| Arch (Hyprland)          | macOS                                                   |
-| ------------------------ | ------------------------------------------------------- |
-| `Super + X` close        | `Cmd + W` close window · `Cmd + Q` quit app             |
-| `Super + M` minimize     | `Cmd + M` · `Cmd + H` hide whole app                    |
-| Focus next window        | `Cmd + Tab` apps · ``Cmd + ` `` windows of same app     |
-| Tile left / right        | `Globe + Ctrl + ← / →`                                  |
-| Maximize (fill)          | `Globe + Ctrl + F` · back: `Globe + Ctrl + R`           |
-| Center                   | `Globe + Ctrl + C`                                      |
-| Fullscreen               | `Globe + F`                                             |
+`Alt` = Option. `Alt` plays Hyprland's `Super`; directional moves use `Ctrl + Alt`
+so LazyVim's `Alt + j/k` and macOS `Opt + ← / →` word-jump keep working.
 
-## Workspaces (Desktops)
+| Arch (Hyprland)                 | macOS (AeroSpace)                               |
+| ------------------------------- | ----------------------------------------------- |
+| `Super + Q` terminal            | `Alt + Enter`                                   |
+| `Super + 1–9` workspace         | `Alt + 1–9`                                     |
+| `Super + Shift + 1–9` move window | `Alt + Shift + 1–9` (focus follows)            |
+| `Super + ← ↑ ↓ →` focus         | `Ctrl + Alt + ← ↑ ↓ →` or `h j k l`              |
+| Move window within workspace    | `Ctrl + Alt + Shift + ← ↑ ↓ →` or `h j k l`      |
+| `Super + Alt + arrows` resize   | `Alt + -` / `Alt + =`                           |
+| `Super + F` toggle float        | `Alt + F` · fullscreen `Alt + Shift + F`        |
+| `Super + J` toggle split        | `Alt + /` · accordion `Alt + ,`                 |
+| `Super + S` scratchpad          | `Alt + S` · send window `Alt + Shift + S`       |
+| `Super + X` close               | `Cmd + W` window · `Cmd + Q` app                |
+| `Super + M` minimize            | `Cmd + M` · `Cmd + H` hide app                  |
+| Reload / reset layout           | `Alt + Shift + ;` then `Esc` reload · `R` reset |
+| Join window into a split        | `Alt + Shift + ;` then `Alt + Shift + h j k l`   |
 
-| Arch (Hyprland)              | macOS                                               |
-| ---------------------------- | --------------------------------------------------- |
-| `Super + 1–9` switch         | `Ctrl + 1–9` (set by `macos/defaults.sh`)           |
-| Next / previous              | `Ctrl + ← / →` · three-finger swipe                 |
-| `Super + Shift + 1–9` move window | Hold the window's title bar, press `Ctrl + N`  |
-| Overview                     | `Ctrl + ↑` Mission Control (add desktops with `+`)  |
-| `Super + S` scratchpad       | No direct match — `Cmd + H` hides, `Cmd + Tab` back |
+Finder, System Settings and Activity Monitor open floating (like Thunar on Arch).
 
 ## Screenshots  (saved to ~/Pictures/Screenshots)
 
