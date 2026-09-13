@@ -10,7 +10,7 @@ tmux and Neovim bindings are identical to Arch — see `config/hypr/dev-cheatshe
 
 | Arch (Hyprland)          | macOS                                                   |
 | ------------------------ | ------------------------------------------------------- |
-| `Opt + Space` launcher   | `Cmd + Space` Spotlight (Raycast: `Opt + Space`)        |
+| `Alt + Space` launcher   | `Cmd + Space` Spotlight (Raycast: `Opt + Space`)        |
 | `Super + V` clipboard    | `Cmd + Space`, then `Cmd + 4` (Spotlight clipboard)     |
 | `Super + Q` terminal     | Spotlight → "WezTerm"                                   |
 | `Super + E` file manager | Finder — `Cmd + Shift + H` home, `Cmd + Shift + .` hidden files |
@@ -29,7 +29,7 @@ so LazyVim's `Opt + j/k` and macOS `Opt + ← / →` word-jump keep working.
 | `Super + Shift + 1–9` move window | `Opt + Shift + 1–9` (focus follows)            |
 | `Super + ← ↑ ↓ →` focus         | `Ctrl + Opt + ← ↑ ↓ →` or `h j k l`              |
 | Move window within workspace    | `Ctrl + Opt + Shift + ← ↑ ↓ →` or `h j k l`      |
-| `Super + Opt + arrows` resize   | `Opt + -` / `Opt + =`                           |
+| `Super + Alt + arrows` resize   | `Opt + -` / `Opt + =`                           |
 | `Super + F` toggle float        | `Opt + F` · fullscreen `Opt + Shift + F`        |
 | `Super + J` toggle split        | `Opt + /` · accordion `Opt + ,`                 |
 | `Super + S` scratchpad          | `Opt + S` · send window `Opt + Shift + S`       |
@@ -56,7 +56,7 @@ Finder, System Settings and Activity Monitor open floating (like Thunar on Arch)
 | Arch                        | macOS                                     |
 | --------------------------- | ----------------------------------------- |
 | `Super + L` lock            | `Ctrl + Cmd + Q`                          |
-| `Super + Shift + Opt + M` exit | `Cmd + Shift + Q` log out              |
+| `Super + Shift + Alt + M` exit | `Cmd + Shift + Q` log out              |
 | gammastep                   | Night Shift (Settings → Displays)         |
 | hypridle                    | Settings → Lock Screen                    |
 | Media / brightness keys     | Work natively                             |
@@ -94,6 +94,6 @@ Finder, System Settings and Activity Monitor open floating (like Thunar on Arch)
   `~/.local/share/tmux/plugins/tmux-resurrect`.
 - **Prefix f** (sessionizer) searches `~/projects`, `~/dotfiles`, `~/Documents`.
   Override with `export TMUX_SESSIONIZER_PATHS="~/work ~/code"`.
-- **Neovim:** `<leader>gg` needs lazygit (`brew install lazygit`);
-  Neogit (`<leader>gn`) works without it.
+- **Neovim:** `<leader>gg` opens lazygit (also `lg` in the shell);
+  Neogit is on `<leader>gn`.
 - **Ctrl + Space** no longer switches keyboard input, so it reaches Neovim.
