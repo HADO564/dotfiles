@@ -22,6 +22,9 @@ config/nvim/lazy-lock.json
 **/__pycache__/
 *.pyc
 
+# macOS
+.DS_Store
+
 # Scratch files
 *.bak
 *.bak-*

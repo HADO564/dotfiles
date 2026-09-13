@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# Fuzzy-pick a project directory and open (or jump to) a tmux session for it.
+# Bound to Prefix f in config/tmux/tmux.conf.
+#
+#   tmux-sessionizer            pick from the search roots with fzf
+#   tmux-sessionizer <dir>      open <dir> directly
+#
+# Search roots: $TMUX_SESSIONIZER_PATHS (space-separated), else the defaults below.
+
+set -euo pipefail
+
+if [ $# -eq 1 ]; then
+  selected="$1"
+else
+  roots=()
+  for r in ${TMUX_SESSIONIZER_PATHS:-$HOME/projects $HOME/dotfiles $HOME/Documents}; do
+    [ -d "$r" ] && roots+=("$r")
+  done
+  if [ ${#roots[@]} -eq 0 ]; then
+    echo "tmux-sessionizer: no search roots exist (set TMUX_SESSIONIZER_PATHS)" >&2
+    exit 1
+  fi
+  selected="$(find "${roots[@]}" -mindepth 1 -maxdepth 1 -type d -not -name '.*' 2>/dev/null \
+    | fzf --prompt 'project > ')" || exit 0
+fi
+
+[ -z "$selected" ] && exit 0
+name="$(basename "$selected" | tr . _)"
+
+if ! tmux has-session -t "=$name" 2>/dev/null; then
+  tmux new-session -ds "$name" -c "$selected"
+fi
+
+if [ -n "${TMUX:-}" ]; then
+  tmux switch-client -t "=$name"
+else
+  tmux attach-session -t "=$name"
+fi

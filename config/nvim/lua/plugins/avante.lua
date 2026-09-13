@@ -3,7 +3,8 @@ return {
     "yetone/avante.nvim",
     event = "VeryLazy",
     version = false,
-    build = "make",
+    -- `make` compiles with cargo; without cargo (e.g. macOS) fetch the prebuilt libraries
+    build = vim.fn.executable("cargo") == 1 and "make" or "bash ./build.sh",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
       "stevearc/dressing.nvim",

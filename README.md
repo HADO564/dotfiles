@@ -25,11 +25,29 @@ the script is safe to run on a machine that is already set up.
 Because it symlinks rather than copies, edits you make later land in this repo
 and show up in `git status`.
 
+### macOS
+
+The Mac side reuses the terminal dev environment only — Neovim and tmux are
+shared with Arch, everything desktop-related is replaced by built-in macOS
+features (mapped in `macos/CHEATSHEET.md`).
+
+```bash
+macos/install.sh --dry-run               # see what it would do
+macos/install.sh --packages --defaults   # brew bundle, link, apply macOS settings
+```
+
 ## Layout
 
 ```
 config/      -> ~/.config/*
 home/        -> ~/.{zshrc,bashrc,profile,...}
+bin/         shared scripts (tmux-sessionizer)
+macos/
+  Brewfile              the few packages macOS doesn't already cover
+  install.sh            links config/{nvim,tmux} + macos/* into place
+  defaults.sh           Ctrl+1..9 desktops, frees Ctrl+Space, screenshot folder
+  CHEATSHEET.md         Hyprland shortcuts -> macOS equivalents
+  config/, home/        Mac-only zsh, WezTerm, starship
 packages/
   desktop-core.txt      curated: what this desktop actually needs
   pacman-official.txt   every explicitly installed repo package

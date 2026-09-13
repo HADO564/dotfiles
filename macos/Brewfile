@@ -1,0 +1,24 @@
+# Install with: brew bundle --file macos/Brewfile
+# Kept small on purpose — macOS covers launcher, screenshots, clipboard history,
+# lock screen, night light and media keys natively (see macos/CHEATSHEET.md).
+
+# --- shell ---
+brew "starship"
+brew "fzf"
+brew "zoxide"
+brew "eza"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
+brew "zsh-completions"
+
+# --- dev ---
+brew "gh"
+brew "tmux"
+brew "neovim"
+brew "ripgrep"          # LazyVim live grep
+brew "fd"               # LazyVim file finder
+brew "tree-sitter-cli"  # nvim-treesitter builds parsers with it
+
+# --- terminal & fonts ---
+cask "wezterm"
+cask "font-jetbrains-mono-nerd-font"
