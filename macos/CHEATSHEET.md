@@ -10,7 +10,7 @@ tmux and Neovim bindings are identical to Arch — see `config/hypr/dev-cheatshe
 
 | Arch (Hyprland)          | macOS                                                   |
 | ------------------------ | ------------------------------------------------------- |
-| `Alt + Space` launcher   | `Cmd + Space` Spotlight (Raycast: `Opt + Space`)        |
+| `Opt + Space` launcher   | `Cmd + Space` Spotlight (Raycast: `Opt + Space`)        |
 | `Super + V` clipboard    | `Cmd + Space`, then `Cmd + 4` (Spotlight clipboard)     |
 | `Super + Q` terminal     | Spotlight → "WezTerm"                                   |
 | `Super + E` file manager | Finder — `Cmd + Shift + H` home, `Cmd + Shift + .` hidden files |
@@ -19,24 +19,24 @@ tmux and Neovim bindings are identical to Arch — see `config/hypr/dev-cheatshe
 
 ## Windows & workspaces (AeroSpace)
 
-`Alt` = Option. `Alt` plays Hyprland's `Super`; directional moves use `Ctrl + Alt`
-so LazyVim's `Alt + j/k` and macOS `Opt + ← / →` word-jump keep working.
+`Opt` (⌥ Option) plays Hyprland's `Super`; directional moves use `Ctrl + Opt`
+so LazyVim's `Opt + j/k` and macOS `Opt + ← / →` word-jump keep working.
 
 | Arch (Hyprland)                 | macOS (AeroSpace)                               |
 | ------------------------------- | ----------------------------------------------- |
-| `Super + Q` terminal            | `Alt + Enter`                                   |
-| `Super + 1–9` workspace         | `Alt + 1–9`                                     |
-| `Super + Shift + 1–9` move window | `Alt + Shift + 1–9` (focus follows)            |
-| `Super + ← ↑ ↓ →` focus         | `Ctrl + Alt + ← ↑ ↓ →` or `h j k l`              |
-| Move window within workspace    | `Ctrl + Alt + Shift + ← ↑ ↓ →` or `h j k l`      |
-| `Super + Alt + arrows` resize   | `Alt + -` / `Alt + =`                           |
-| `Super + F` toggle float        | `Alt + F` · fullscreen `Alt + Shift + F`        |
-| `Super + J` toggle split        | `Alt + /` · accordion `Alt + ,`                 |
-| `Super + S` scratchpad          | `Alt + S` · send window `Alt + Shift + S`       |
+| `Super + Q` terminal            | `Opt + Return`                                   |
+| `Super + 1–9` workspace         | `Opt + 1–9`                                     |
+| `Super + Shift + 1–9` move window | `Opt + Shift + 1–9` (focus follows)            |
+| `Super + ← ↑ ↓ →` focus         | `Ctrl + Opt + ← ↑ ↓ →` or `h j k l`              |
+| Move window within workspace    | `Ctrl + Opt + Shift + ← ↑ ↓ →` or `h j k l`      |
+| `Super + Opt + arrows` resize   | `Opt + -` / `Opt + =`                           |
+| `Super + F` toggle float        | `Opt + F` · fullscreen `Opt + Shift + F`        |
+| `Super + J` toggle split        | `Opt + /` · accordion `Opt + ,`                 |
+| `Super + S` scratchpad          | `Opt + S` · send window `Opt + Shift + S`       |
 | `Super + X` close               | `Cmd + W` window · `Cmd + Q` app                |
 | `Super + M` minimize            | `Cmd + M` · `Cmd + H` hide app                  |
-| Reload / reset layout           | `Alt + Shift + ;` then `Esc` reload · `R` reset |
-| Join window into a split        | `Alt + Shift + ;` then `Alt + Shift + h j k l`   |
+| Reload / reset layout           | `Opt + Shift + ;` then `Esc` reload · `R` reset |
+| Join window into a split        | `Opt + Shift + ;` then `Opt + Shift + h j k l`   |
 
 Finder, System Settings and Activity Monitor open floating (like Thunar on Arch).
 
@@ -56,7 +56,7 @@ Finder, System Settings and Activity Monitor open floating (like Thunar on Arch)
 | Arch                        | macOS                                     |
 | --------------------------- | ----------------------------------------- |
 | `Super + L` lock            | `Ctrl + Cmd + Q`                          |
-| `Super + Shift + Alt + M` exit | `Cmd + Shift + Q` log out              |
+| `Super + Shift + Opt + M` exit | `Cmd + Shift + Q` log out              |
 | gammastep                   | Night Shift (Settings → Displays)         |
 | hypridle                    | Settings → Lock Screen                    |
 | Media / brightness keys     | Work natively                             |
@@ -84,7 +84,7 @@ Finder, System Settings and Activity Monitor open floating (like Thunar on Arch)
 | `→`                  | Accept grey history suggestion               |
 | `Ctrl + R`           | Fuzzy history (fzf)                          |
 | `Ctrl + T`           | Fuzzy insert file path (fzf)                 |
-| `Alt + C`            | Fuzzy cd (fzf)                               |
+| `Opt + C`            | Fuzzy cd (fzf)                               |
 | `z <dir>`            | zoxide jump                                  |
 
 ## Differences from Arch
